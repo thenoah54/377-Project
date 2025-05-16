@@ -1,35 +1,46 @@
 <html>
     <head>
-        <title>Steam Sales!</title>
+        <title>STEAM SALES!</title>
         <script src='377_Project_JS.js' defer></script>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1 id="title">Steam Sales</h1>
         <nav id="navigation">
+            <h1 id="title">STEAM SALES</h1>
             <ul>
                 <li>
-                    <a href="link">HOME</a>
+                    <a href="377_Project_html.html">HOME</a>
                 </li>
                 <li>
-                    <a href="link">HELP</a>
+                    <a href="377_Project_HELP.html">HELP</a>
                 </li>
                 <li>
-                    <a href="link">ABOUT</a>                
+                    <a href="377_Project_ABOUT.html">ABOUT</a>                
                 </li>
             </ul>
+            <div>
+                <form id="search" onsubmit="searchGame(event)">
+                    <input type="text" id="searchBar" placeholder="Search">
+                    <button type="submit" id="submitSearch">Submit</button>
+                </form>                
+            </div>
         </nav>
-        <h1>Body</h1>
-        <h2>Content 1</h2>
-        <h3>Content 2</h3>
+        <br>
+
+        <div id='gameSlider' style="width:100%; height:250px" data-simple-slider>
+            <!-- <img src="https://picsum.photos/612/612?random=1"/>
+            <img src="https://picsum.photos/612/612?random=2"/> -->
+          </div>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-slider/1.0.0/simpleslider.min.js"></script>
 
         <table id="tableInfo">
             <tr id="labels">
-                <th>Name<button onclick="">0</button></th>
-                <th>Rating<button onclick="">0</button></th>
-                <th>Deal Rating<button onclick="">0</button></th>
-                <th>Normal Price<button onclick="">0</button></th>
-                <th>Sale Price<button onclick="">0</button></th>
+                <th></th>
+                <th>Game</th>
+                <th>Rating</th>
+                <th>Deal Rating</th>
+                <th>Normal Price</th>
+                <th>Sale Price</th>
             </tr>
         </table>
     </body>
