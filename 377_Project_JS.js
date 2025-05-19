@@ -1,11 +1,11 @@
-var hostName = 'https://www.cheapshark.com/api/1.0/deals?storeID=1';
+var hostName
+    const usingMock = false;
+    const mock = 'https://mock-ea65f4fc2d424b3387f4ed888e171972.mock.insomnia.rest/api/1.0/deals';
+    hostName = usingMock ? mock : 'https://www.cheapshark.com/api/1.0/deals?storeID=1';
+
 
 function getsteamData() {
-    // const usingMock = false;
     // deals https://www.cheapshark.com/redirect?dealID={id}
-    // hostName = usingMock ? 
-    //     'https://mock-ea65f4fc2d424b3387f4ed888e171972.mock.insomnia.rest/api/1.0/deals' : 
-    //     'https://www.cheapshark.com/api/1.0/deals?storeID=1';
 
     slider();
 
@@ -78,8 +78,8 @@ function searchGame(event) {
     // games https://www.cheapshark.com/api/1.0/games?title={title}
     const title = document.getElementById('searchBar').value;
     console.log(`Searching for: ${title}`);
-
-    hostName = `https://www.cheapshark.com/api/1.0/deals?storeID=1&title=${title}`;
+    mock = 'placeHolder';
+    hostName = usingMock ? mock : `https://www.cheapshark.com/api/1.0/deals?storeID=1&title=${title}`;
 
     const tableInfo = document.getElementById('tableInfo');
     tableInfo.innerHTML = `
@@ -92,9 +92,7 @@ function searchGame(event) {
                 <th>Sale Price</th>
         </tr>
     `;
-
     getsteamData(); 
-
 }
 
 function slider() {
@@ -114,7 +112,6 @@ function slider() {
         });
         simpleslider.getSlider();
     });
-
 }
 
 
